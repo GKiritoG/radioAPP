@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,12 +7,61 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="請選出你喜歡的韓國女星團體"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="btnOK"
+        android:text="送出"
+        app:layout_constraintTop_toBottomOf="@+id/rdbTWICE"
+        tools:layout_editor_absoluteX="32dp" />
+
+    <TextView
+        android:id="@+id/txvShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="你選的是 :"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <RadioGroup
+        android:id="@+id/rdbTWICE"
+        android:layout_width="88dp"
+        android:layout_height="91dp"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="85dp">
+
+        <RadioButton
+            android:id="@+id/rdbTWICE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="l.O.l" />
+
+        <RadioButton
+            android:id="@+id/rdbTWICE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TWICE" />
+
+        <RadioButton
+            android:id="@+id/rdbAOA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AOA" />
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>
